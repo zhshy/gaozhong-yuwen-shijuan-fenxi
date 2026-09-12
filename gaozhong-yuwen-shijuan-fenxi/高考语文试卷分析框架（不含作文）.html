@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="BdLZknmpDZqAQJxeouEfdB">
+<head data-page-node-id="DPv09zLsR5vRAW0ofG0xsn">
+<meta charset="UTF-8" data-page-node-id="Oedzpk4bfFCX3vxcNicHLk">
+<title>历年高考语文试卷分析框架（不含作文）</title>
+<style>
+  :root{
+    --ink:#1f2329;
+    --ink-2:#4a5159;
+    --ink-3:#788089;
+    --line:#dfe3e8;
+    --line-2:#eef1f4;
+    --accent:#1a5fb4;
+    --accent-soft:#eaf2fd;
+    --warn:#b4471f;
+    --warn-soft:#fdf1ec;
+    --ok:#1f7a4d;
+    --ok-soft:#eaf7f0;
+    --bg:#ffffff;
+    --bg-2:#fafbfc;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Microsoft YaHei","PingFang SC","Hiragino Sans GB","Source Han Sans SC",sans-serif;
+    font-size:15px;line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{max-width:1000px;margin:0 auto;padding:48px 40px 80px;}
+  header.top{border-bottom:3px solid var(--ink);padding-bottom:20px;margin-bottom:8px;}
+  h1{font-size:26px;margin:0 0 10px;letter-spacing:.5px;}
+  .sub{color:var(--ink-3);font-size:13.5px;margin:0;}
+  .meta{margin-top:14px;font-size:13px;color:var(--ink-2);}
+  .meta span{display:inline-block;margin-right:18px;}
+  .note{
+    background:var(--accent-soft);border-left:4px solid var(--accent);
+    padding:14px 18px;border-radius:0 6px 6px 0;margin:26px 0;font-size:14px;color:#173e6b;
+  }
+  h2{
+    font-size:19px;margin:44px 0 14px;padding-left:12px;
+    border-left:5px solid var(--accent);line-height:1.3;
+  }
+  h2 .en{font-size:12px;color:var(--ink-3);font-weight:400;margin-left:8px;letter-spacing:.5px;}
+  h3{font-size:16px;margin:28px 0 10px;color:#12314f;}
+  p{margin:10px 0;color:var(--ink-2);}
+  ul,ol{margin:10px 0;padding-left:22px;color:var(--ink-2);}
+  li{margin:6px 0;}
+  strong{color:var(--ink);}
+  code{background:var(--bg-2);border:1px solid var(--line-2);border-radius:4px;padding:1px 5px;font-size:13px;color:var(--warn);}
+  table{width:100%;border-collapse:collapse;margin:14px 0 22px;font-size:13.5px;}
+  th,td{border:1px solid var(--line);padding:9px 11px;vertical-align:top;text-align:left;}
+  th{background:var(--bg-2);font-weight:600;color:var(--ink);white-space:nowrap;}
+  td.v{font-weight:600;color:#12314f;white-space:nowrap;width:150px;}
+  tbody tr:nth-child(even){background:#fcfdfe;}
+  .tag{display:inline-block;font-size:12px;padding:1px 8px;border-radius:10px;background:var(--accent-soft);color:var(--accent);margin-right:6px;}
+  .tag.w{background:var(--warn-soft);color:var(--warn);}
+  .tag.g{background:var(--ok-soft);color:var(--ok);}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+  .card{border:1px solid var(--line);border-radius:8px;padding:16px 18px;background:var(--bg);}
+  .card h4{margin:0 0 8px;font-size:14.5px;color:#12314f;}
+  .card p{font-size:13.5px;margin:6px 0;}
+  footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-3);}
+  @media print{
+    body{font-size:12px;}
+    .page{padding:0;max-width:none;}
+    h2{page-break-after:avoid;}
+    table{page-break-inside:auto;}
+    tr{page-break-inside:avoid;}
+  }
+</style>
+</head>
+<body data-page-node-id="bJsGYAwwDXoPXPngkNqCnm">
+<div class="page" data-page-node-id="Q0DZyRRMT4Hz7ok7dpFJrq">
+
+<header class="top" data-page-node-id="Wp6VdUftPCrqNw6yGzh4xP">
+  <h1 data-page-node-id="UAVqbvF6YZfKtuR8tzcNbr">历年高考语文试卷分析框架（不含作文）</h1>
+  <p class="sub" data-page-node-id="bb1Aq9VDUCysJRDVdhNAvW">以"考什么 / 怎么考 / 考得怎么样 / 为什么这么考"四问为主线，客观题抓选项设计、主观题抓设问与采分点 —— 可直接作为教研工具 / 课题研究工具（编码表）使用</p>
+  <div class="meta" data-page-node-id="hzodbXnUF48Vx2BBBcJmGc">
+    <span data-page-node-id="4k0JNAGu34Xf066IdGBGht">适用：高中语文（必修·选择性必修）</span>
+    <span data-page-node-id="8Bssl78Riothq2VldxhXsz">学理依据：《中国高考评价体系》《普通高中语文课程标准（2017年版2020年修订）》</span>
+    <span data-page-node-id="MUiwKQKiinoDtWL1ZQSRxt">版本：v2.0</span>
+  </div>
+</header>
+
+<div class="note" data-page-node-id="ZZpeARYfxGBdJpUxnRMLkk">
+  <strong data-page-node-id="Sg1a28BoGzbTWjGCaiDTGx">先定性再动手：</strong>分析历年真题本质上属于<b data-page-node-id="2XgHG3Ge5aKZmCnvwAXxt6">内容分析</b>（对既有文本进行非介入式编码），所以真正的答案是——<b data-page-node-id="LAXWZ3xVOPrlPJ8QT6V7BV">先设计一张编码框架，让每道题在同一套字段下被登记</b>。本文件按"<b data-page-node-id="jAjfVJi3hpysGVJqNYrIIa">四问主线</b>：考什么 / 怎么考 / 考得怎么样 / 为什么这么考"组织，这是索引维度；每一个问题下再落到<b data-page-node-id="aLmbBoMwwxmCv4wsCYvlJN">五层字段</b>，这是真正的编码维度。<b data-page-node-id="B2sGmucvFtKGAoGUujxNEy">索引维度与编码维度必须是两套，不能混成一层</b>——这是本框架与常见"8 + 8 角度清单"最关键的区别。
+</div>
+
+<h2 data-page-node-id="u0Kpnc52fxpilvpHVE3p6N">第 0 步 <span class="en" data-page-node-id="f6gSqugZI4U0L9mcDdYP4Y">动手前必须先定的三件事</span></h2>
+<p data-page-node-id="j6ZsX3bftosdm6hNpa3UH4">这一步跳过，后面所有统计都不可比——这是真题分析最常见的翻车点。</p>
+<table data-page-node-id="cpSWJGSMlFOWu9mcPIREPr">
+  <thead data-page-node-id="H6TYkkKTDReqagYHU7Fy0X"><tr data-page-node-id="E6YXFt4QCw0jicMPQVO78v"><th data-page-node-id="kU6hGjPdoSnitaPIoDvdbC">事项</th><th data-page-node-id="fkw0xYSWiDdqVgsjlkWW8T">要落定的问题</th><th data-page-node-id="SHRNpHj102icr86XoJ0VbB">建议口径</th></tr></thead>
+  <tbody data-page-node-id="d3rcJr7l0VETWehd8kWDw5">
+    <tr data-page-node-id="Q0vGaQ2pyTrp3ROSBMr5bH">
+      <td class="v" data-page-node-id="iWLXiGADXFvLTtmG8uBRIe">① 分析单元</td>
+      <td data-page-node-id="Nv2JNV43ILH5vFB9EJQZWA">"一道题"指什么？一道大题可能含 2—3 个设问，选项是否单独计入？</td>
+      <td data-page-node-id="JsDHt1fTMHyt2F5EqQ4Dr8">主编码到<b data-page-node-id="5SpeRY3kWGspj3eHKDwEcm">设问</b>（小题号，如 8 ①）；选项另设子表，按"选项"为单位编码。</td>
+    </tr>
+    <tr data-page-node-id="2ByYxP8MzKZfQ1XrTul7gS">
+      <td class="v" data-page-node-id="wEartGIPRPrzcMqtRcZciV">② 样本分层</td>
+      <td data-page-node-id="hlJtEjCuri0JX3KcYThCEd">全国甲/乙卷、新课标Ⅰ/Ⅱ卷、自主命题卷命题逻辑不同，混在一起趋势必然失真。</td>
+      <td data-page-node-id="P7u7OqXmaiE3B0wpUBe1i5">先按<b data-page-node-id="7e1rjEC3aSMHKFfWcvF6Xr">卷别 + 年份 + 是否进入新高考</b>三层分组，分组内再谈趋势；跨组只做定性描述。</td>
+    </tr>
+    <tr data-page-node-id="PrKNtPiTx8OdvUPoJ2e8ND">
+      <td class="v" data-page-node-id="wa3EyK9SPOmMSJsJscepz5">③ 赋分口径</td>
+      <td data-page-node-id="IS1cfdLQzp2Sk2pqJ78ejF">同一考查点在不同年份分值不同，"题量占比"和"分值占比"是两个结论。</td>
+      <td data-page-node-id="wSOsliBhOQmExe0pHeL12X">频次与分值<b data-page-node-id="LQ9xa9AB8vKZoiPhGwhgQ2">双轨统计</b>，凡涉及"重要性"一律用分值占比说话。</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 data-page-node-id="EIFR0QkvcALBLKF8NtYPqf">一、主框架 <span class="en" data-page-node-id="ObUHc0mz3m72V03opB1eHU">四问主线 × 五层字段</span></h2>
+
+<div class="note" style="background:#f6f8fa;border-left-color:#5f6b7a;color:#3b434d;" data-page-node-id="T3wG8IjJjqPUyC6OrJ8GXT">
+  <strong data-page-node-id="aEzca824JwzfQ4iuFxg5LC">为什么要有"四问"：</strong>"考什么 / 怎么考 / 考得怎么样 / 为什么这么考"是<b data-page-node-id="0p56bT6maJRYsMbREtvBDX">分析目的</b>——它回答"我这次分析究竟要得出什么"。"选项设计""设问与采分点"是<b data-page-node-id="z8MzQRd8fgRIJ56q8E5JgH">抓手</b>，是抓手最锋利的那两处，但抓手不等于维度本身。下面的八层角度是可以真正落表统计的字段。
+</div>
+
+<h3 data-page-node-id="bZy5CUlkLF3gIXG43Kar95">1.1 四问主线 → 落表字段的对应</h3>
+<table data-page-node-id="AwHp67tIubQaucQ3U0B9oz">
+  <thead data-page-node-id="uwgV3mK7o4aoxV5RDzU56m"><tr data-page-node-id="EMq8vRHAfsDX0d2K8O8F6X"><th data-page-node-id="Y8gHhicSypEXAmjUTJtS4U">四问</th><th data-page-node-id="FMhEfm7ktjKasJW0ZDINAT">实质是在问</th><th data-page-node-id="njbPDYQWgczyPZugIiwlut">落到的字段</th><th data-page-node-id="v2EAz0Hwos3xQcZqEasVA4">产出物</th></tr></thead>
+  <tbody data-page-node-id="NsiapFQYcq1LhRA33kvbfj">
+    <tr data-page-node-id="BTA5dUCHysGLnuxIJZRqKV"><td class="v" data-page-node-id="KSmgXki8EBZ2ZseCBBQHvd">考什么</td><td data-page-node-id="O99YYU2ghFZAggOzp5AIGr">内容与考点覆盖</td><td data-page-node-id="FLqb1mTrDte71xDzRGit23">板块 × 文本类型 × 考点 × 教材关联</td><td data-page-node-id="pBp1vmd3CTRqAHVNXlRpfE">考点频次矩阵、双向细目表</td></tr>
+    <tr data-page-node-id="fPl2KwKmcMHNYuLir0qV9z"><td class="v" data-page-node-id="9AGSb3nqBvtuD04ZIZK65X">怎么考</td><td data-page-node-id="EjHotVTEv8Ywdi5thxRObz">设问技术与选项技术</td><td data-page-node-id="oYfNqcntjDoqmZLPNe3kF3">指令动词 · 限定语 · 选项改写 · 设误类型 · 情境类型 · 评分标准</td><td data-page-node-id="mWrBzxZGZKij4lmotbjniQ">命题技术谱系表</td></tr>
+    <tr data-page-node-id="FV9hxwVCRXZ6Fhwhi1HgNf"><td class="v" data-page-node-id="fdNIKueA6OPpq2YI3ZoGVC">考得怎么样</td><td data-page-node-id="DvZyQiLh0vD5HdMjDwAomS">难度与区分度</td><td data-page-node-id="kwxbBgG8CrKdgKcQz6y7Bj">难度值 P · 区分度 D · 得分率 · 空答/满分率 · 高低分组差异</td><td data-page-node-id="9d9fiuEJwXlzXbKKzpSPvW">难度结构与失分归因</td></tr>
+    <tr data-page-node-id="Ba41JE0lkdPBcJkJ5cDHV8"><td class="v" data-page-node-id="qf9rqAGHZ6aQcQeqLWlzBK">为什么这么考</td><td data-page-node-id="gxzMxGWVwrkNfsjCX7nli5">课标导向与趋势</td><td data-page-node-id="MBI1bVKnrG47zG3uoHskmL">四层四翼映射 · 三类情境 · 学业质量水平四 · 年度修订说明</td><td data-page-node-id="ERkQZkCALwXew40HGWnO55">依据链 + 趋势结论</td></tr>
+  </tbody>
+</table>
+
+<h3 data-page-node-id="9euLaPWbz7FnBylGEGW0Aw">1.2 五层字段体系（真正用于编码）</h3>
+<table data-page-node-id="jIx0fInmdnqjLGhLlrOLvs">
+  <thead data-page-node-id="T39TPNPnQlrbbpQ86tMvj0"><tr data-page-node-id="LeREY9VLFbOD7VxkZPTQ4A"><th data-page-node-id="aAFyX6fWrtRTcnvUBU1LCU">层</th><th data-page-node-id="hZCbCLxq6fQdmfHSrCJ4ml">字段</th><th data-page-node-id="2DSell5unl1aX74BPOh37S">一定要落表的理由</th></tr></thead>
+  <tbody data-page-node-id="q3gEMXTPxljhuGx8F8EHGS">
+    <tr data-page-node-id="nAZhSdfqC5zv9BzXA7mMzO"><td class="v" data-page-node-id="88ZJY0d2dCnDUMoZzR5oIr">L1 基础属性</td><td data-page-node-id="M6P5ZXDlCSBCXok3kxtXQH">年份 / 卷别 / 是否新高考 / 题号 / 题型 / 分值 / 板内与全卷占比</td><td data-page-node-id="447T7ACaY8vCsZ5wiiPY91">所有统计的分组变量，缺一层口径就不可比</td></tr>
+    <tr data-page-node-id="xRsbAgHqfne1QRg66aoP1I"><td class="v" data-page-node-id="imxzrHpjiBiM6D366HkPf7">L2 内容属性</td><td data-page-node-id="FK44FCamIHsX8LCfZOFkEU">板块 / 文本类型 · 体裁 / 选材来源 / 篇幅与信息密度 / 单文本或群文 / 教材关联</td><td data-page-node-id="QKKvEHWoHbB9tgeYmZSaI8">"考什么"的载体层，也是教考衔接的证据</td></tr>
+    <tr data-page-node-id="bVIla81UCN4E4ETrJLZyba"><td class="v" data-page-node-id="dG2youHkKmEeAHDT2uKUUg">L3 能力与素养</td><td data-page-node-id="SLnaeDI1wBbiDH2u4vqSpB">考点（知识）· 指令动词（映射认知层级）· 情境类型 · 实践活动类型 · 四层四翼 · 学业质量水平</td><td data-page-node-id="VDZ2pg8u9qPaEzsaMNS4aQ"><b data-page-node-id="ctDCK0Yg8uKEtYQ9pEgCEv">知识与能力必须双编码</b>，"考比喻"≠"考鉴赏"</td></tr>
+    <tr data-page-node-id="DDBruBzNyAuVxj8GEcofoK"><td class="v" data-page-node-id="pewyYmhPJVYY4n255VHDXS">L4 命题技术</td><td data-page-node-id="eatOrsXlNDXqTRX2oGKsEm">选项改写方式 · 设误类型 · 正确项改写幅度 · 题干限定语 · 答案要点结构 · 评分标准形态 · 开放度</td><td data-page-node-id="LDzFVgvGTvT8xdhBgBN587">最富研究价值、也最常被跳过的一层</td></tr>
+    <tr data-page-node-id="qlwnhUdmSLTg01HwFipFdr"><td class="v" data-page-node-id="Ahl5CepiJxi3SMDL1g4fXK">L5 测量属性</td><td data-page-node-id="m0EUwatbD6rJQHpkoQhMhq">难度 P · 区分度 D · 得分率 · 空答率 · 满分率 · 高低分组选项分布</td><td data-page-node-id="udOZzHwxDdsfAy0cYSrpVc">没有这层，"难度与区分度"就只能写定性感受</td></tr>
+  </tbody>
+</table>
+
+<h3 data-page-node-id="FOl7IOTRj8wyKjCPORINSR">1.3 本框架与"8 + 8 角度清单"的差异（差异即理由）</h3>
+<table data-page-node-id="kXat9af3bvHPvW4y5i7a7q">
+  <thead data-page-node-id="mD6qcsme3PvjGzbqXKnBXM"><tr data-page-node-id="c4fhGjETTUTS1bCOrYxdwE"><th data-page-node-id="V1dZ0j2DlzYBg2Dk8AxBGw">对比项</th><th data-page-node-id="e0HcbeD5oyHb1PvpObWnRn">常见 8 + 8 角度清单</th><th data-page-node-id="I06HrhEFnINOpoVAB79qjo">本框架</th><th data-page-node-id="Jfu2TGa2xEGqBupo8pAw6J">差异为什么重要</th></tr></thead>
+  <tbody data-page-node-id="Mn42Yl0F1khnCsCsNABMb4">
+    <tr data-page-node-id="jb6LjXNuaAhNpNNAViBkxZ">
+      <td class="v" data-page-node-id="noj3cESGJdDtoCHsOA9PvK">组织逻辑</td>
+      <td data-page-node-id="UGaBOSZYuI6BZiO5y0LZiN">按"客观题 / 主观题"平行罗列八个角度，角度之间基本并列</td>
+      <td data-page-node-id="mgheHcMV6BmZ9QxsCDhR3w">四问锚定目的 → 五层字段承载统计 → 再分主客观</td>
+      <td data-page-node-id="jcsdAEYB5i0FuLMY3u3lb2">8 + 8 的"8"是维度，"四问"是目的，两者不在一个层级。混在一起会既锚不住目的，又落不了表</td>
+    </tr>
+    <tr data-page-node-id="79878XW5F8uf4caEiwg55J">
+      <td class="v" data-page-node-id="hlQ8qVZM6OEO3f8COZAWjD">分析单位</td>
+      <td data-page-node-id="wyE6R06qrJis5u3gBzzBsf">未定义"一道题"的边界</td>
+      <td data-page-node-id="75hTsI18sCbDi90CoSnePV">主编码到<b data-page-node-id="OvuGqZXcGbmhcI2NZRxXwv">设问</b>，选项另建子表</td>
+      <td data-page-node-id="Z5vTjC2E2FAKEHPVlFcOdP">不定义单位，"题量占比"这类统计前后口径会打架</td>
+    </tr>
+    <tr data-page-node-id="XfTkwAqIItQY0WEt2gXpwB">
+      <td class="v" data-page-node-id="25mVrNYf4fe4aROLYwz2fZ">难度数据</td>
+      <td data-page-node-id="BkBAcXVsasKarxg13HHOyN">直接要求"通过率、区分度"</td>
+      <td data-page-node-id="qRTWkYuW8qa4zkNp106kWT"><b data-page-node-id="GbGbTUHbgb6JBvZLGCRGQq">双轨</b>：公开卷无官方作答数据时，降级为"结构难度可及性"（作答负荷 + 文本依赖度 + 模板有效性 + 知识点交锋度）</td>
+      <td data-page-node-id="LFAEAfOoGw4eXAwjyXLbdV">这是 8 + 8 最实操的漏洞——绝大多数老师拿不到 P、D 值，这一栏会整栏空掉</td>
+    </tr>
+    <tr data-page-node-id="HLPO5xCm0CDRK3DCLWMsVs">
+      <td class="v" data-page-node-id="8UGTDBUjPEDJQsJyguDnN8">能力层级依据</td>
+      <td data-page-node-id="3n6CEWXF2McycFs0qcacLl">沿用旧考试大纲的 A 识记 / B 理解 / C 分析综合 / D 鉴赏评价</td>
+      <td data-page-node-id="88quHZYjkm8qTBe5ZETJfv">四层四翼 + 课标素养，旧 ABCD <b data-page-node-id="fwEvVZzJnVPsMUBSZk54ki">仅作辅助参照</b></td>
+      <td data-page-node-id="mGzGQ2lJWxOI6nDggFfE3E">取消考试大纲后能力层级已无官方效力，直接引用会削弱学理说服力</td>
+    </tr>
+    <tr data-page-node-id="EeXV8VAX7EOOJiTKFEzsgy">
+      <td class="v" data-page-node-id="Q2PJRsTPTRctbx34lc6i4d">分析对象边界</td>
+      <td data-page-node-id="pGZa8accV4zQ3xdYVB8F7A">客观题含"默写填空"、主观题含"翻译 / 默写"，两边重复</td>
+      <td data-page-node-id="sNdUcU6HAnXzCyIJboOuDi">把翻译、默写、语用等填答型题单列为<b data-page-node-id="DMIaSM672eAVCFA1fVxlYS">限制作答题</b>（与选择题、采点作答题并列三分）</td>
+      <td data-page-node-id="yxq7GFciLoFLnFaztPSn8O">默写衡量的是精确回忆，被计入选对得分率会直接污染"选择题难度"结论</td>
+    </tr>
+    <tr data-page-node-id="1ja6xxHpn8QHGehyHkHMmC">
+      <td class="v" data-page-node-id="xkgGAq0Sf8T9pGaLCGCEls">赋分梯度</td>
+      <td data-page-node-id="EiF7hpLpwzVE5G6yd04qeY">"分值梯度（4/6/8 分）与要点数量对应"</td>
+      <td data-page-node-id="7qw4JHLDbqN1E5jBGcVhZT">只登记实际分值，不预设 4/6/8 分档与"要点数 = 分值 ÷ 2"的换算</td>
+      <td data-page-node-id="3Q36sfPZK63LnYnWTtaBdh">套路化换算在近年命题中已不成立，预设会让统计失真</td>
+    </tr>
+    <tr data-page-node-id="tqxaShBaFFGtk2OrRKydz6">
+      <td class="v" data-page-node-id="hN2Y5uxTlmgGGQufuu2y3J">得分率层级</td>
+      <td data-page-node-id="HLmJfYJyqwAWfh1zKoB8NN">只问"平均分、难度"</td>
+      <td data-page-node-id="hFkWspXAQm257wROMO6gFC">区分<b data-page-node-id="SCi8kG3eCfQX5TYLZOODAR">整题得分率</b>与<b data-page-node-id="A6AfYQwjd1yVEq8OQD3MnW">单点得分率</b>——后者才真正对教学有用</td>
+      <td data-page-node-id="UumfuCDeBl78MuptU0GrHd">"8 分题平均得 4 分"无法回答学生究竟在哪一个采分点上失分</td>
+    </tr>
+    <tr data-page-node-id="lms1yprJWAMsUXJDLCPzNu">
+      <td class="v" data-page-node-id="Md9bhg3Gegf3iCX2ifOxBq">教学性维度</td>
+      <td data-page-node-id="Ckn6MNyGDrInwkwUwFqebD">未单列</td>
+      <td data-page-node-id="ArgkRMtyHxBiP7AfYSmlqb">新增<b data-page-node-id="X06IDV0SeWlD1l4TppSKmj">教考衔接度</b>与<b data-page-node-id="kK2NbIVHWfKexcy4JzKIy8">教材关联度</b>独立成栏，并区分显性 / 隐性关联</td>
+      <td data-page-node-id="WG24LbFkFbQknq7a1mig3q">一线教师做真题分析，最想要的抓手就是这个；且近年命题的显性回落是可观测趋势</td>
+    </tr>
+    <tr data-page-node-id="CH1mesEw0wimBTAGRO25Pa">
+      <td class="v" data-page-node-id="3hyapaGXMATE9UKWN7CjsU">情境概念层级</td>
+      <td data-page-node-id="8NIsiFIRGgjggpWZFUxaJC">把"情境化任务、图文结合、跨文本互证"与课标三类情境混为一谈</td>
+      <td data-page-node-id="8qMgOJX8b0uCNIAOkFWrNH">统一到课标<b data-page-node-id="F4ZBvFDg78l5yKWvI9oc1l">个人体验 / 社会生活 / 学科认知</b>三类情境</td>
+      <td data-page-node-id="7Bux9boTFj7dCEr8SA0W0Q">混用会导致同一道题在不同人手里被编成不同类别，编码一致性崩塌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 data-page-node-id="UuovCMYxC1jmmC2URpMAbq">1.4 二分之外：第三种题型（建议单列）</h3>
+<table data-page-node-id="wOH5c6wZHYAwqiSlQ3kbwT">
+  <thead data-page-node-id="39gLVpLzH46mhMGdLt00DC"><tr data-page-node-id="iUe7VykIsKZ3lz2ybGy7Xq"><th data-page-node-id="Ael9qV8CKNVboCSn9G5ZiG">题型类别</th><th data-page-node-id="ugN04wXEYJh307EtU4k17J">包含</th><th data-page-node-id="RJBxpcG9UXX29aiWUri2pP">评分机制</th><th data-page-node-id="JnLjqOaGd1AUMj4g17YbD9">分析重点</th></tr></thead>
+  <tbody data-page-node-id="EfVK04Riu4KLppAeDaBxee">
+    <tr data-page-node-id="MpHNpOr6LG26S1HeQmopyR"><td class="v" data-page-node-id="ImmzYTXzfOWnjmsMVkZkwA">选择题</td><td data-page-node-id="B3DkusGPZVDATQdH5b5uqK">信息类、文学类、文言、古诗、语用选择题</td><td data-page-node-id="PDTZ0kBLV5q3BGfuL9F9HR">唯一答案，全对给分</td><td data-page-node-id="6rHSYnWN4Jrn8VmiYTNnHf">设误类型 · 干扰项吸引力 · 选项改写幅度</td></tr>
+    <tr data-page-node-id="QzPfH2nCJmEM3jlUWfj0ns"><td class="v" data-page-node-id="LbARAnYdvtZj7ExTzESC3A">限制作答题</td><td data-page-node-id="LsEMf7J3hZ4ifemtdiljrC"><b data-page-node-id="U21ri0Wq07VEvWwrUMFYDx">默写填空、文言翻译</b></td><td data-page-node-id="WJ0NHZ70QfXtuEp1kv3xuS">逐点给分，答案高度确定</td><td data-page-node-id="XO0TTdxkC5jlklZcwE0bIc">篇目分布 · 情境化默写比例 · 翻译赋分点（实词/虚词/句式/文意）</td></tr>
+    <tr data-page-node-id="BhMrSUi2LCALeJqvXPeot5"><td class="v" data-page-node-id="UQ6VHiaS5MzivDNKtSgJEF">采点作答题</td><td data-page-node-id="QmGaADl7chnDJJBLAjxIuJ">简答、分析、赏析、探究、语用主观、图文转换</td><td data-page-node-id="g449ub1yuiEQzVvvOqVY5o">要点 + 质量分层，可有多解</td><td data-page-node-id="PPrhkwgE5P3OfAIdhIBCsL">设问方式 · 答案要点结构 · 评分标准形态 · 开放度</td></tr>
+  </tbody>
+</table>
+<p data-page-node-id="BpzPn0ccodfpMAvshde8qT">默写与翻译虽在"形式上"分属主客观两端，但本质同属"受文本和标准答案双重约束"的一类，<b data-page-node-id="1EgiUTMtaCMIa8ppj7GPA0">单列后统计口径才干净</b>：既不会把默写的高得分率误读为"选择题容易"，也不会把翻译的逐点给分当成"采点作答"来分析。</p>
+
+<h2 data-page-node-id="saX1CVJpMF17FhUATKOwrG">二、整卷宏观层 <span class="en" data-page-node-id="LVjVdpTZ1190mZ9JSZXcyv">看结构、看趋势</span></h2>
+<table data-page-node-id="MehRqZC6DDHJ6LUsHBry2B">
+  <thead data-page-node-id="cYaBUa370bDM2qIPtdofqg"><tr data-page-node-id="fLZK85R7vEyMC7F1KEMJSB"><th data-page-node-id="G7p0r0vsVeCNnwDmCcyP22">序号</th><th data-page-node-id="k9tEnOrE5ey9BD5i0itChL">分析角度</th><th data-page-node-id="PmHpkz1b3r67mDPaZYrYzD">具体观察点</th><th data-page-node-id="H7zmbdGVcWR3xutcOighsG">可支撑的结论</th></tr></thead>
+  <tbody data-page-node-id="aQtb3IXmSdL81AX6kxmouE">
+    <tr data-page-node-id="sRlikNesaQDO6vMchXfFA7"><td class="v" data-page-node-id="BvzlisLLd0X2Sm0B3qW64a">1</td><td data-page-node-id="2tlzP9GXW0lGAuojZilGvt">板块分值结构</td><td data-page-node-id="YKUjzNyNUWKQEeku55AUFM">现代文阅读Ⅰ/Ⅱ、古代诗文阅读、语言文字运用、名篇名句默写各占分值，逐年列出</td><td data-page-node-id="466Rxj3o1JfUYfrVdP0fdG">板块权重迁移方向（如语用板块压缩、阅读板块扩容）</td></tr>
+    <tr data-page-node-id="e28cFHRgEUtN6z9FTkhH7I"><td class="v" data-page-node-id="YObstbJAiGXdALFJG15NHc">2</td><td data-page-node-id="HdHfNVGhs0PYoqBrXtwHOd">主客观题配比</td><td data-page-node-id="fxd5mwqgGV21Qy7CPBQXcA">选择题分值 ÷ 非选择题分值，逐年曲线</td><td data-page-node-id="DbQIDEGG5bRWjRzRcTArKm">是否在推进"减少碎片化选择、增加主观表达"的导向</td></tr>
+    <tr data-page-node-id="WvLprkcquR4jnLXZzkX4KL"><td class="v" data-page-node-id="eybme3wEo76Cq99pWtwSEd">3</td><td data-page-node-id="HM4ljD6HB7gdBpB9VSUjzC">题量与阅读量负荷</td><td data-page-node-id="9IGLGbSBZPCO7lrJRPSFYa">总题数、文本字数、需要书写的作答字数</td><td data-page-node-id="C5YpCZ6xEAktLUqAUEnPN3">作答负荷变化，能否支撑"减少死记硬背、增加思维容量"的判断</td></tr>
+    <tr data-page-node-id="RrvTbwktwK3OkqZ3SPT321"><td class="v" data-page-node-id="3WplBu86NgRRbdGQ7IfgAj">4</td><td data-page-node-id="KfIBslLrzkE8SAEJEmEvSq">选材来源</td><td data-page-node-id="eBLq0OOHYfRu9Z0i38deF8">报刊/专著/学术论文/文学期刊/官方文献；作者国别、作品年代、是否原创改编</td><td data-page-node-id="zGEATEkEjNPAdb7z66STZZ">选材的<b data-page-node-id="8mI2egLEUrqjBZhtleVzb6">时代性、典型性、多样性</b>（课标原文要求）落实情况</td></tr>
+    <tr data-page-node-id="WqrVw7HEHZ92bfyE1Zyd73"><td class="v" data-page-node-id="RCmMQSfFlkqH9fAio534cw">5</td><td data-page-node-id="0pTjkGCkhTXywgsupIBIXF">文本类型与体裁</td><td data-page-node-id="X9Fc7PMMlgejVk6yH9JW6Q">信息类（论述文/实用类/非连续性文本）、文学类（小说/散文/戏剧）、文言文（史传/论说/杂记）、古诗（诗/词/曲）</td><td data-page-node-id="wsbKQFWpfJsA3mI2SGB7EE">文本语体分布是否"角度多样、视野开阔"</td></tr>
+    <tr data-page-node-id="fwGRzSVTg7575WBGG4WqSL"><td class="v" data-page-node-id="FD6MmykvLxOtjl6sMKJ9xj">6</td><td data-page-node-id="GZ0SBpnpwaw5gvOlSfDHw2">试卷结构与版式稳定性</td><td data-page-node-id="R8Afhc8z6jXVdGXXYRh2xx">题号顺序、板块顺序、总分、是否有创新呈现形式（如图表、多文本组合）</td><td data-page-node-id="TJTeGC6rbvBOWTnqoS8njj">判断命题改革的"小步快跑"节奏</td></tr>
+    <tr data-page-node-id="6sFGzpgRkBzG51SdFdJJBz"><td class="v" data-page-node-id="qGsMDnbECNzbJexGte9ygG">7</td><td data-page-node-id="DSU3TVOFYhuOtX7yLTlf8G">时间序列趋势</td><td data-page-node-id="X9hGZrEXBD58EvxT7xG4ln">至少连续 5—8 年（样本过小不称"趋势"，只能叫"观察"）</td><td data-page-node-id="XCtIwe45ky9MriIGxNBDGc">真正的规律性变化，而非年度偶然</td></tr>
+    <tr data-page-node-id="uOoZ8SxfU6K0QdE6DE11Ec"><td class="v" data-page-node-id="1Bry53aiszqBMK0BY4kz4k">8</td><td data-page-node-id="3hogecVC8NczUk56GM6AAa">难度与区分度</td><td data-page-node-id="loIOQiAfbCyLSRTz5XRJLM">官方难度值 P、区分度 D、平均分；若无官方数据，用教研机构统计并注明来源</td><td data-page-node-id="JGnwDt5hPa5NpCEETypHqG">难度稳定区间、选拔功能发挥情况</td></tr>
+    <tr data-page-node-id="qLu10YC4C5IxwZBvTvxVBk"><td class="v" data-page-node-id="bPtrIqFkWXnT30G29kyAMI">9</td><td data-page-node-id="swMC6A9m8kcx9zrDk1Q16Q">教材关联度</td><td data-page-node-id="CsD2luqMcp8ahj449X4exH">显性关联（直接考课内篇目、作家、单元主题）与隐性关联（能力点对应单元任务）分别登记</td><td data-page-node-id="qSiBhqBD4AcEzVOzvWZsZB"><b data-page-node-id="ERcYOWDGAHPcW99TSRO82r">教考衔接</b>程度——这是最能为一线教学提供抓手的角度</td></tr>
+    <tr data-page-node-id="ZZWR8Xa71M0wjhk6im83JD"><td class="v" data-page-node-id="yEmwSI7PzbLRCaXKxYz1pa">10</td><td data-page-node-id="lSFsriuXLUL02SyDNnCQ1u">命题依据映射</td><td data-page-node-id="Lm88V9UoWCkhc1pM5YJ8Qu">对照高考评价体系"四层四翼"与课标学业质量水平四逐项归位</td><td data-page-node-id="AdhBCe0qEuhN7qQ9YEyeQO">试卷的"合法性"说明，也是研究报告中必须有的依据链</td></tr>
+  </tbody>
+</table>
+
+<h2 data-page-node-id="IylZlk3iY2aWqzVmEoJ95a">三、客观题分析层 <span class="en" data-page-node-id="AJqQHLEav7yWj9w6s0lrrG">选择题专项</span></h2>
+<p data-page-node-id="bW1J5tDsc5IBNzgisyo4V5">客观题的分析价值，一半在"考什么"，另一半在"怎么设错"。设错技术分析是很多老师忽略的富矿。</p>
+<table data-page-node-id="igsTnwJQsoEx96YYAOE1fU">
+  <thead data-page-node-id="UnRVmx4vk5XFKPqF1Oz9ZQ"><tr data-page-node-id="xX1SzIvCMkVUTyM7bXw0u6"><th data-page-node-id="CL0qFRq2zRtAAo2RBI1IYt">序号</th><th data-page-node-id="e5ZKcU3orxNFs7fiy5iYNv">分析角度</th><th data-page-node-id="hw8kVTHifSno6Vn74ta9KF">具体观察点 / 编码取值</th><th data-page-node-id="Zd8qnTp59RB4vyNkg26vpq">可支撑的结论</th></tr></thead>
+  <tbody data-page-node-id="IA40KzBfcfe4GYfHAWjE0U">
+    <tr data-page-node-id="6J3xupPIFcvE5DFkj7Gcgf"><td class="v" data-page-node-id="sNr1x1IpSyFqEgO0pMZ8QL">1</td><td data-page-node-id="Qe4MgrfCPcSeaaOYx1SNuX">考点分布与频次</td><td data-page-node-id="HBCofQRGU4HlhJRkfAqNke">逐题登记考查点（信息筛选整合、理解分析、推断判断、文言实词、断句、文意概括、语病、衔接、词语运用……），做<b data-page-node-id="Eb7uYxHcwfKvyySCSwiVC1">年份 × 考点频次矩阵</b></td><td data-page-node-id="SKzFukUBnYA6ziv7yJqIvy">高频考点清单 → 直接转化为复习重点</td></tr>
+    <tr data-page-node-id="UObm7gQ3HJ1ZCtJf1akps1"><td class="v" data-page-node-id="BEJURWXGsY5ZyLtpznhwIF">2</td><td data-page-node-id="i6p0EvHlGZXG4uLWHvUQmc">认知层级</td><td data-page-node-id="E0tGjRwGiUkIngIsutggsm">题干思维要求分四级：<span class="tag" data-page-node-id="RaeumYu3Q9dfQuJephbaeE">识别确认</span><span class="tag" data-page-node-id="yGkSLBdsZAOuQlkeUg4KEc">理解转述</span><span class="tag" data-page-node-id="VdCXjdSEWkQsPxiG4G2rTl">推断判断</span><span class="tag" data-page-node-id="Bpcy4jNZzPGDKcCInY8A0a">评价鉴赏</span></td><td data-page-node-id="kkB6xRMXXx4o9CLPNgSnoN">选择题是否长期停留在低阶识记，或已上探到推断与评价</td></tr>
+    <tr data-page-node-id="wxlKmpDw14fNDuBqBC10Dv"><td class="v" data-page-node-id="HU4npgpFpuVDAMMkdgiCZo">3</td><td data-page-node-id="cmU1xVSw974USqGNhDj3H0">题文对应位置</td><td data-page-node-id="9EokakjqHhSzhbT0Sg5JJG">选项信息在原文中的落点：句内 → 句间 → 段内 → 跨段 → 全文整合</td><td data-page-node-id="zGORvZijAvPmGGL31voTmZ">定位难度的变化，反映"检索能力"要求的提高</td></tr>
+    <tr data-page-node-id="qjWpKioGuyGoB1xH2KQ8CN"><td class="v" data-page-node-id="J5np4kRHGfGiLJv3cZYysH">4</td><td data-page-node-id="Ermvrho4YanI1mKBS83PTg">选项改写方式</td><td data-page-node-id="SBCl1GVkRva15935O9Ypda">原文→选项的加工动作：同义替换 / 概括压缩 / 语序调整 / 增补限定 / 概念替换 / 逻辑关系改写（因果、条件、递进、并列）</td><td data-page-node-id="0m4NJMrBnkGyePS374Vq2o">哪类改写最容易失分 → 训练靶点</td></tr>
+    <tr data-page-node-id="qcS5f9lYl0kGXe73LyKUTn"><td class="v" data-page-node-id="cPIjTFFXFlndZwu3P3FM31">5</td><td data-page-node-id="DjBPTvPpDSZh1U4DRloLjP"><b data-page-node-id="IOH0BXK9FfeqJ19XRcMFdO">干扰项设误类型</b></td><td data-page-node-id="p791w7RcsQN40zjf1hZwIH">八类设误法逐项编码统计：偷换概念、张冠李戴、无中生有、以偏概全、强加因果、混淆时态/模态、曲解文意、答非所问</td><td data-page-node-id="Jyo0WEz2DAiRCCdaYmMuTV">设误法频次表 = 学生"避坑清单"的实证来源</td></tr>
+    <tr data-page-node-id="T2tWsgrjkEiUXqqSVbMdhc"><td class="v" data-page-node-id="vztlI058VLNS2JgpeeDTXO">6</td><td data-page-node-id="hiS61Ee8nIW5cGxGiG0sb4">正确项特征</td><td data-page-node-id="2MnujuEXTDLMU0AamYRpOB">正确项对原文的改写幅度（越小越易）、是否为原文语句的直接转述</td><td data-page-node-id="orEJ0iJfwI2GmKjiSyezv0">难度来源是"找得到"还是"看得出来"</td></tr>
+    <tr data-page-node-id="G1G8g3zcVTBJs1qCsB4sqU"><td class="v" data-page-node-id="FtMGHuZwsmbQfw64ZASxav">7</td><td data-page-node-id="IdCh5N5IpiD2rBDMoxh11n">题干限定语</td><td data-page-node-id="vAOE6lOH3BRG2XMokvNBJ0">"根据原文""推断""最恰当""不符合的一项"等约束性词语的强度与分布</td><td data-page-node-id="pXoq6HzBUdiEjgw62h0PNv">答题指令的精确化程度</td></tr>
+    <tr data-page-node-id="357bSuoY0Z6VfJJx7ZlO5g"><td class="v" data-page-node-id="v9PDFy1nyHE4gyFyJtuA1F">8</td><td data-page-node-id="aV58bl1LB06MPg50H6HKIM">选项语言特征</td><td data-page-node-id="t77B52AEZJLTgUZZYjXafw">绝对化词语（一定、全部、必须）、模态词（可能/必然）、程度副词的分布密度</td><td data-page-node-id="ahL7uBtxGP61wRdj3BC5FY">是否存在可被"极端表述避坑法"利用的规律</td></tr>
+    <tr data-page-node-id="DelO6naCM2jhnaRV6pOdA0"><td class="v" data-page-node-id="RIbHSRBQeCCVSQWI3P39kR">9</td><td data-page-node-id="L1d8uVxzx6mvVxHjMHuDSV">干扰项吸引力</td><td data-page-node-id="AuPR9tGmm2mQw19lBM9AHN">若可获得作答数据：各选项选择率、低分组/高分组选择差异</td><td data-page-node-id="dy1de2WDw7YlxnbwcY75va">干扰项是否"真在干扰"，还是形同虚设（区分度分析）</td></tr>
+    <tr data-page-node-id="A2pSDZ1buEuZ0OrWG0elgJ"><td class="v" data-page-node-id="m7J7M4KHZ0XD9FVteHEEzp">10</td><td data-page-node-id="kZ1IFN1bPrG6gDnbSAnDzp">考点与文本类型耦合</td><td data-page-node-id="bWUJMRAk6XqOLIMRizk2cs">信息类文本（筛选+推断为主）、文学类文本（理解+鉴赏为主）、语用题（规范运用为主）分别建模</td><td data-page-node-id="9BqrByBAnCKudKJKHYGAK9">不同文体的应试策略差异有据可依</td></tr>
+  </tbody>
+</table>
+
+<h2 data-page-node-id="5SMEhsVJgsIeEF7OVHWT9K">四、主观题分析层 <span class="en" data-page-node-id="69LPAKhqI7sJI3U53xo1eu">采点作答题专项</span></h2>
+<p data-page-node-id="ChGBbv8TiJdzU0L3XXobIo">主观题最关键的一步是：<b data-page-node-id="EL7Jz0qohjaRkGFpKSRj5f">不要只看题干，必须把评分细则一起编码</b>。题干告诉你"问什么"，细则才告诉你"真正要什么"。</p>
+<table data-page-node-id="ybQ8MqqwqSkoCUPlO00M2y">
+  <thead data-page-node-id="DjBfJYGJI8bwbsXt3E95DN"><tr data-page-node-id="FEPvNvg1q7VNJpYqaBw6vI"><th data-page-node-id="bHMCid9JAWKHU6kLOJlDT9">序号</th><th data-page-node-id="L47ziBQcubAdH14L7Pepnf">分析角度</th><th data-page-node-id="uha4qjDLS6zHZqedSwtdpI">具体观察点 / 编码取值</th><th data-page-node-id="EIwuiWF3hHuJMyGUauA8jw">可支撑的结论</th></tr></thead>
+  <tbody data-page-node-id="jgiiBudVDYJxT58QqeQgUy">
+    <tr data-page-node-id="gYteJWJ6bFcwm5fw3KmjR0"><td class="v" data-page-node-id="ck3LNRkeoYFfrN9VYPVthP">1</td><td data-page-node-id="4ie8UQDgGWrprL0uDd5QFt">板块与分值分布</td><td data-page-node-id="IsBmSLSjDgjvUxMZ6hIbVs">各主观题题号、所属板块、分值、赋分梯度</td><td data-page-node-id="GJZEL16aWzlOwuPqlLuAj0">哪些板块把"分"押在主观表达上</td></tr>
+    <tr data-page-node-id="zMU2OgviHFrSkT25sQkCPR"><td class="v" data-page-node-id="ZMFTslyx1xxfAREwiGbTS2">2</td><td data-page-node-id="h7zgRpxRjQIhfOpCQCeutM">题干结构四要素拆解</td><td data-page-node-id="DEFvyGRGpA1PPtqD6IWkvI">把每道题干拆成：<b data-page-node-id="FkCe1in1OsiSmQAwCEsbql">情境/背景 + 指令动词 + 限定范围 + 赋分</b>，对照设问是否"限定越少、开放越大"</td><td data-page-node-id="2R5rLWN9MnGCokmzLIMgPh">设问的开放度演变，以及"套模板失效"的机理</td></tr>
+    <tr data-page-node-id="VIqJd7ng5FAO4aHdI1jFz1"><td class="v" data-page-node-id="RGSpox2rqrllPDG9V2DtFw">3</td><td data-page-node-id="eeqwBF2ZDT2wBb1IbJrYt5"><b data-page-node-id="uZzAQJ76L2USuVzMWTBFYx">指令动词频次</b></td><td data-page-node-id="O3fmJDmRRm2A0OVky6l9sP">概括、分析、赏析、说明、探究、评价、比较、推断、梳理、拟写……按年统计并映射认知层级（布卢姆 / SOLO）</td><td data-page-node-id="lYRu3SzEAlaCnwNRia0NOd">能力要求的重心迁移（如"分析""探究"占比上升）</td></tr>
+    <tr data-page-node-id="EiPEsqLVj77X1v7c3PlVXC"><td class="v" data-page-node-id="w7kDAxQen1OurJNXSELxSV">4</td><td data-page-node-id="fFxF1OuqnQEz8VT5uW7sTO">情境类型</td><td data-page-node-id="OuGjRHlVyM4Ue6IN1mXDgN">按课标三类情境编码：<b data-page-node-id="yj2Rv6zJr6rrcrux47nDXY">个人体验情境 / 社会生活情境 / 学科认知情境</b></td><td data-page-node-id="kCnlTUWehi8PKHJSSTv3Y2">三类情境的运用是否均衡，学科认知情境是否被低估（当前研究热点）</td></tr>
+    <tr data-page-node-id="dmyd52aiiMjQgQ8wjz1vxR"><td class="v" data-page-node-id="5wGHvXGTEEEy7EF9BuSEAO">5</td><td data-page-node-id="VZBkSpUPXl7pdHyuzq6na9">语文实践活动类型</td><td data-page-node-id="rH8X30u3MX4FYEN7LYFaiV">按课标命题指向编码：<b data-page-node-id="PIYDj43yCKXaewIbL55VCU">阅读与鉴赏</b>（整体感知/信息提取/理解阐释/推断探究/赏析评价）· <b data-page-node-id="aOCwQTP6jy2hqloBVKIp25">表达与交流</b>（叙述表现/陈述阐释/解释分析/介绍说明/应对交流）· <b data-page-node-id="lu7PDjQVisfpAQgd2wUsCG">梳理与探究</b>（积累整合/筛选提炼/归整分类/解决问题/发现创新）</td><td data-page-node-id="ZjrSCoUlDJh2nk63B5UsjF">三大实践活动的分值分布 → 最贴近课标的分析口径</td></tr>
+    <tr data-page-node-id="78bKqGgpL6f2TxYXGDV8U5"><td class="v" data-page-node-id="H4V7inbnRm4KYpab8zaZTI">6</td><td data-page-node-id="JFMYurYRQj3U2aCfsUSjT8">文本依赖度</td><td data-page-node-id="iFGtIwoAyiefORZOBdkn5W">答案能否完全从文本内部推出（信息自足度），还是需调用外部知识（文学史、文体知识）</td><td data-page-node-id="lxmLSBmH4NOTpnM6TYHZhy">"反套路化"程度，与学科认知情境关联</td></tr>
+    <tr data-page-node-id="1CMsVJR4k6cgsHYNzSvwoL"><td class="v" data-page-node-id="F72lSddnlzEt7LnTIFBsDV">7</td><td data-page-node-id="LTsL7cG6SMKtBJo8hBrTIJ"><b data-page-node-id="gN8oNagsdfP3byhXFYapYS">答案要点结构</b></td><td data-page-node-id="NEY2kIK4YkGt9PHKUpt5ok">得分点数量、单点分值、要点类型（内容要点 / 手法术语 / 分析论证 / 表达效果 / 情感态度 / 观点评价）、要点是否有层级差</td><td data-page-node-id="n01bGEloKoehiitAQffiCl">把"答案长什么样"变成可统计的模型 → 答分点教学有据</td></tr>
+    <tr data-page-node-id="hAvrDZ3EoTilupfVNixWLo"><td class="v" data-page-node-id="5jEGrb5NdKrzMgfL63Zggy">8</td><td data-page-node-id="EBsP68X2QCZsTwbx1Rtvdn">评分标准形态</td><td data-page-node-id="tRYClBq7eBR7emQH1e6qJc">采点给分（细则式）/ 关键能力分层 / 等级描述 / SOLO 分层 / "言之成理即可"开放评分</td><td data-page-node-id="96ieV8ZazsmKWellHZhWvA">评分方式与考查目标的匹配度，是命题质量的重要判据</td></tr>
+    <tr data-page-node-id="mAkCCnthgannfYzqYC5SGg"><td class="v" data-page-node-id="ooJp8RxdE4n4CClEzphfJx">9</td><td data-page-node-id="QRyWBUJehBxi1soEexYTB2">开放度与答案确定性</td><td data-page-node-id="f5N4wBk1kclvEDhkmM4PFn">答案唯一 / 多解并列 / 完全开放，逐年占比</td><td data-page-node-id="TyLAaqiAOQYaHC4DLVKkoG">开放性探究性试题的落实程度（课标明确要求"多设置主观性、开放性的题目"）</td></tr>
+    <tr data-page-node-id="RzdAyhQTZQFZ9VA2DYckCF"><td class="v" data-page-node-id="71mxjXAM5KTWybZC3jCPHI">10</td><td data-page-node-id="WlBi1UBxXXhoAgYYCc6LeQ">作答负荷</td><td data-page-node-id="N5XQqAfxy3tAXaMS7OprJO">建议字数 / 实际优秀答案字数、书写总量</td><td data-page-node-id="zt5mTcuy6CHIjwcReS64oZ">考试时间与思维容量的张力，是否为"时间不够"型失分</td></tr>
+    <tr data-page-node-id="kHmYAzdL0N0ZBt4IF2sBZL"><td class="v" data-page-node-id="TeO0jFQXuJYgICXDqzBL8d">11</td><td data-page-node-id="2pd1ejBoX8PZ5EcFRm9OC1">教材关联（教考衔接）</td><td data-page-node-id="ejN4nlPvnd0FMf5OcZycXv">与统编教材篇目、单元学习任务、整本书阅读、18 个学习任务群的对应关系</td><td data-page-node-id="Vwh2iZdXrz7UXWAuiNfeOQ">教学回归教材的直接证据</td></tr>
+    <tr data-page-node-id="MwkdnsCKljkl7wZsOdtFnx"><td class="v" data-page-node-id="AsW5bYcB9BLybFU1zPwJrs">12</td><td data-page-node-id="XXAGNJBGV5KuRukurcf1Si">专类专项细分</td><td data-page-node-id="vNxpp1M1YsOcwTOF4rj7p3"><b data-page-node-id="gUxIT9sjRh88BJM7GtxbHH">默写</b>：篇目分布、情境化默写比例、必修/选择性必修配比；<b data-page-node-id="gxMtqzDac7K5rsG0rTEhjv">翻译</b>：实词、虚词、句式、文意的赋分点分布；<b data-page-node-id="Wj8dX5pQscXRS1lTBLhBAI">断句/语言运用</b>：单独建模</td><td data-page-node-id="l6Q5fEjgLH1eX36671PcTs">拆出高确定性、高产出的专项训练清单</td></tr>
+  </tbody>
+</table>
+
+<h2 data-page-node-id="K80BXqICytL0stf1nSnUFk">五、依据层 <span class="en" data-page-node-id="FbpBeamSYhzzYSCYXwrzNl">为什么这样命题</span></h2>
+<p data-page-node-id="4gfzAHCuysZI45l3UntSTt">前文所有统计最终都要归位到两条依据链上，研究报告的"学理说服力"就来自这里。</p>
+<div class="two" data-page-node-id="3VF6OKoEuavFjRYKmOJyjQ">
+  <div class="card" data-page-node-id="hMQ345Ywn4Vg5m08hWJ9HL">
+    <h4 data-page-node-id="M8UbhsolQD79AbHNmdOVr2">链条一 · 《中国高考评价体系》</h4>
+    <p data-page-node-id="8RJWhvhcN4RUcnqPRVDjVu"><span class="tag" data-page-node-id="wTUB1ce5g0om1NL4S6mfNK">一核</span>立德树人、服务选才、引导教学</p>
+    <p data-page-node-id="aZe5OgUEELP2uY42EvlNfB"><span class="tag" data-page-node-id="WecLxkFKxCmn7rIZAiXSE0">四层</span>核心价值、学科素养、关键能力、必备知识（考什么）</p>
+    <p data-page-node-id="uUucuRBKTuvIJgTFroUwHS"><span class="tag" data-page-node-id="sXyTD9on0C8tNHFHVWIB1t">四翼</span>基础性、综合性、应用性、创新性（怎么考）</p>
+    <p data-page-node-id="PbiIRqrxI80IIkENjbaTvl"><span class="tag" data-page-node-id="u3AvnIsoIvsolprLqedPAP">载体</span>情境 —— 承载考查内容、实现考查要求</p>
+    <p data-page-node-id="Cmep5iAWHDymvhbqdHpX9B">命题理念：价值引领、素养导向、能力为重、知识为基。</p>
+  </div>
+  <div class="card" data-page-node-id="KSy14Wr2ooatHdl1cAQcxZ">
+    <h4 data-page-node-id="ENwYAG8sFpZhbODHv8dAvj">链条二 · 高中语文课程标准</h4>
+    <p data-page-node-id="DLrpGyMc9AsRVlLo7tShKV"><span class="tag" data-page-node-id="zJs9nPDOWbdhqh6KJzU3LJ">素养</span>语言建构与运用、思维发展与提升、审美鉴赏与创造、文化传承与理解</p>
+    <p data-page-node-id="6epELlvMWpNFIAZeA6KML0"><span class="tag" data-page-node-id="kBTfQOVRTktwpcFhJIO9GH">载体</span>个人体验情境 / 社会生活情境 / 学科认知情境</p>
+    <p data-page-node-id="6DRKE8EyNqHwYTcUORqz2R"><span class="tag" data-page-node-id="to7NUKkDFcSQRAXGkNAwkl">任务</span>18 个学习任务群；典型任务要"多样、综合、开放"</p>
+    <p data-page-node-id="HRYlB0e9W9bgNbEOcaY92N"><span class="tag" data-page-node-id="NYCu7EQQeUvkiv0066FITw">水平</span>水平二是学业水平考试依据，<b data-page-node-id="lEq41JtTjalf3NCENAcoY5">水平四是高校考试招生录取依据</b></p>
+    <p data-page-node-id="x25CltzfJCErsU6XEZ48GL"><span class="tag" data-page-node-id="q2EI8GucFmNShFF48QcmnX">原则</span>避免单纯知识点、能力点设题，避免死记硬背；试卷结构不应固化</p>
+  </div>
+</div>
+<p style="font-size:13px;color:#788089;" data-page-node-id="N1MRqQFhZLQ9BVdvDrUtCw">依据来源：教育部《中国高考评价体系》发布说明及《中国考试》相关解读文章；《普通高中语文课程标准（2017年版2020年修订）》"学业质量""学业水平考试与高考命题建议"部分。以上表述为课标与官方解读原文要点，未添加条目编号。</p>
+
+<h2 data-page-node-id="KEuSewfNV0KKU396EPzh9P">六、可直接套用的三张表 <span class="en" data-page-node-id="dgXjUYGWSDv4eZR8ubVC9o">研究工具模板</span></h2>
+
+<h3 data-page-node-id="qX55OVWAmAOFrulTc4G6nU">模板 A · 设问编码表（主表，一行一个设问）</h3>
+<table data-page-node-id="6dQ79pHyAmZVfwEDYCI01D">
+  <thead data-page-node-id="J4A90mpNmoFBogxlvBGXn7"><tr data-page-node-id="htLQ1tfNzJUn3FGqWGuonN"><th data-page-node-id="9RX87PrztYz5IR7hCtzazZ">字段</th><th data-page-node-id="W3eRTiMY5OJRi1O1MrSZjo">取值示例</th></tr></thead>
+  <tbody data-page-node-id="KBd9Y7OBYMvbCttUtu6NKF">
+    <tr data-page-node-id="YjhtwNJRztvXtkKVadscJ1"><td class="v" data-page-node-id="kkfxvwz5NgEdDoEzzfbFJx">题目编号</td><td data-page-node-id="h2raR0prRQP7qc9MCYleFK">2023-新课标Ⅰ-8①</td></tr>
+    <tr data-page-node-id="F2TX2ApPlw4BaCLE20ZlwY"><td class="v" data-page-node-id="Lzm4Mhrt5H40DMJD1l0Ilb">卷别 / 年份 / 是否新高考</td><td data-page-node-id="DtgrEYTmkV7A69F0uwJraF">新课标Ⅰ / 2023 / 是</td></tr>
+    <tr data-page-node-id="3m1w500dKqMTkw0AUJTLbG"><td class="v" data-page-node-id="6OrEJgQYLtq8Jy1E0xaJ72">板块</td><td data-page-node-id="9gV9NUvcQBqZ9PbSP5c8m8">现代文阅读Ⅱ（文学类）</td></tr>
+    <tr data-page-node-id="Rref342uSKzQIDPPkTqrkC"><td class="v" data-page-node-id="yITkbwd4CKMGjUPIsgapKm">文本类型 · 体裁</td><td data-page-node-id="KBdSueLfKvfJW4rLRnZxPm">散文 · 当代</td></tr>
+    <tr data-page-node-id="QvqarlbwgCRlTV53sz4tUi"><td class="v" data-page-node-id="OFvLZlQyfgGPm6A4CjoX9F">题型</td><td data-page-node-id="Pgxx8rHzGg6uhCd9fULxLJ">选择题 / 简答 / 翻译 / 默写 / 语用主观</td></tr>
+    <tr data-page-node-id="eF8cFBcxmntN54xcC6LFAG"><td class="v" data-page-node-id="RVLzZOtQNICRQCZ56OkDFA">指令动词</td><td data-page-node-id="NHzJLKhyQ2pEyAbEysf9Z7">分析</td></tr>
+    <tr data-page-node-id="5nMpinel3RUUthjzI9lTSU"><td class="v" data-page-node-id="Wnt3PiPpCFoP99XbnsoFYK">情境类型</td><td data-page-node-id="CngnmqqNZH27cx2KvHT7mk">学科认知情境</td></tr>
+    <tr data-page-node-id="ZU6A0A3I7jUkz0T9CK42sH"><td class="v" data-page-node-id="0XN0aNmlNa048Rn5GqGKIQ">实践活动类型</td><td data-page-node-id="TE1Skx0rK6elme935ZHnun">阅读与鉴赏—赏析评价</td></tr>
+    <tr data-page-node-id="BIczbn4b4NkaRO68HMrMb3"><td class="v" data-page-node-id="4QjJEcuIzJMCCRfGJBw0Va">认知层级</td><td data-page-node-id="kCbXAIvKAKbFHDEAXWK9ue">分析 / 评价（布卢姆）或 SOLO 多点结构</td></tr>
+    <tr data-page-node-id="abJWQQvY23iiQhF8uy9QCg"><td class="v" data-page-node-id="Hqj25Bz721EUJ0wBr7wgdO">分值 / 得分点数量</td><td data-page-node-id="A7sD9bTF7IrTUrPU3jGhVw">4 分 / 3 个要点</td></tr>
+    <tr data-page-node-id="tVtugrwKdedBoI61o9qsFV"><td class="v" data-page-node-id="d8n6uDhXWnT1I9hxdXxoGn">评分方式</td><td data-page-node-id="ORZydI2eDqrDrA5uNRHLCX">采点给分 + 分析质量分层</td></tr>
+    <tr data-page-node-id="A6AiFY5ezWvJfepHw6clZk"><td class="v" data-page-node-id="4PGUZR6zkfr78xrNYRnHLQ">开放度</td><td data-page-node-id="A8XNsCXpeA7xOYT9m5flvH">半开放（多解并列）</td></tr>
+    <tr data-page-node-id="FqL4HQ6STyQ3jtYFn48iU7"><td class="v" data-page-node-id="pV9a5xRYFUHWW6qZSHfy5v">教材关联</td><td data-page-node-id="8YFwpBbYKKd2jelfD592HR">隐性关联—单元学习任务"文学短评"</td></tr>
+    <tr data-page-node-id="shOcMUywEScY65VAqH6HZx"><td class="v" data-page-node-id="hQacfT9nuI7kFhkdqiRHBA">文本依赖度</td><td data-page-node-id="C2zjyuPHcqNJ3BFTHmZKA8">高（信息自足）</td></tr>
+  </tbody>
+</table>
+
+<h3 data-page-node-id="aOeHwfek9KBLwMIGViC4VD">模板 B · 干扰项设误编码表（一行一个错误选项）</h3>
+<table data-page-node-id="1IGpO6b4r5w0l7TjAc1eg7">
+  <thead data-page-node-id="Lb5YZqbR0MTUlUODDJExCC"><tr data-page-node-id="oUYkHKBoDNmvbyxYdK8HiA"><th data-page-node-id="dW3a0CmoOCmNdEpFlxQhdw">题号</th><th data-page-node-id="xAO60nntueSEKvrZjH52GV">原文落点</th><th data-page-node-id="hUcjqmcbqdx9nppXjInB0x">改写方式</th><th data-page-node-id="eHV03BjsFml49pNX3ZtU0B">设误类型</th><th data-page-node-id="oUGkk62nj6Ymdc9UfroOfa">是否被"极端词"提示</th></tr></thead>
+  <tbody data-page-node-id="KPIhF1qJfnwQL5GeQInADX">
+    <tr data-page-node-id="jZt4cWTo2Y7fBELZxnoJhR"><td data-page-node-id="io53L1JtJxgDDsYZQDcrKa">2023-新课标Ⅰ-1-B</td><td data-page-node-id="NvvtTuYVTTlWKoHEBn2psS">段 2 第 3 句</td><td data-page-node-id="tLcOzELOaqwOqJjfpi8eyJ">概念替换</td><td data-page-node-id="jtJ9BYGckXXgpJbAEjmMBw">偷换概念</td><td data-page-node-id="E8gQTxBVACkbL0XJdmRAtl">否</td></tr>
+    <tr data-page-node-id="vv4TB6qXivVIAh0Ba6lxOK"><td data-page-node-id="RtllCAhmtVM5Mqo4FBdlmB">2023-新课标Ⅰ-1-C</td><td data-page-node-id="0dS38pGIWMvukf6KKXN2nj">跨段（段 2+段 4）</td><td data-page-node-id="fRgRc1aEeYvDnnneE0Ik8D">逻辑关系改写（并列→因果）</td><td data-page-node-id="w23GgUR5wRMEmOpx9ufJUI">强加因果</td><td data-page-node-id="9Zk8GcFhraRMv5XW4YfJyc">是（"因此"）</td></tr>
+    <tr data-page-node-id="AhWmtc2VaOANXoDOolQxHO"><td data-page-node-id="3U8mREYcX0OM0Kb3s42GWg">……</td><td data-page-node-id="BBFTEfjSJY3oGfvB4gDDXs">……</td><td data-page-node-id="N1gUbTmTTo0ZhvucSHCwBA">……</td><td data-page-node-id="BgbduyllQv8ZAsP5dvHiym">……</td><td data-page-node-id="XzTtrsGr71fRhEJZnOhwfq">……</td></tr>
+  </tbody>
+</table>
+
+<h3 data-page-node-id="FC6WDO7tgvoHEBPEmoReSB">模板 C · 双向细目表（横轴能力 × 纵轴内容，格内填分值）</h3>
+<p data-page-node-id="swP6Gj9ZFgU0neP3uESkD3">纵轴=内容板块（信息类文本 / 文学类文本 / 文言文 / 古诗 / 名句默写 / 语用）；横轴=能力层级（识记理解 / 分析综合 / 鉴赏评价 / 探究创新）。这张表能把"内容覆盖"和"能力覆盖"一次性看清，是试卷分析报告里最通用的一张图。</p>
+
+<h2 data-page-node-id="ACynN52fvX1XGkuMX1HCud">七、高频翻车点 <span class="en" data-page-node-id="i20eKMAc6ZdQApIxQ5FCRH">自己先审一遍</span></h2>
+<table data-page-node-id="2MNOoeK4HykiJbxDnXxzeh">
+  <thead data-page-node-id="fD15wlS02IgTPR0eBFrSOe"><tr data-page-node-id="5mov8pcjTNkMXrYkjpPVpc"><th data-page-node-id="HnFuXahaFPCFYR9lgUmo8J">序号</th><th data-page-node-id="V7CK65cmAFvv7qymnjiDtX">典型问题</th><th data-page-node-id="0Md6Gaz4yPGqm5tE8tWbWj">修正做法</th></tr></thead>
+  <tbody data-page-node-id="d5vYyEpUXadoj0KJ7xjYzY">
+    <tr data-page-node-id="dzNihfI8184ZFNBMFxNClG"><td class="v" data-page-node-id="lW9VZA1lghm61fCHOrZDbG">1</td><td data-page-node-id="MSoOn7D4K5OHHg2qABFD7m">没定义分析单元就开始统计，"题量"口径前后不一</td><td data-page-node-id="CEGAxJijAg4ODUN47GLTLo">先落定第 0 步的三件事，全表口径唯一</td></tr>
+    <tr data-page-node-id="LctpfGIoGHfAdTOtAruGfp"><td class="v" data-page-node-id="PXeKzg5in6b2CXCnrBRnNG">2</td><td data-page-node-id="XoK44wWhG54NJu6uFck23I">卷别混统（全国卷 + 新高考卷 + 自主命题卷一锅炖）</td><td data-page-node-id="g8iTPuYh5r0No9zpoEHkqd">分层分组，组内谈趋势</td></tr>
+    <tr data-page-node-id="UQ3BE9jHazGB7Et02q4JK7"><td class="v" data-page-node-id="A1ACNle7bzZTFCb8andRAk">3</td><td data-page-node-id="eznFA0S8wqVEum3sNn7pBE">主观题只看题干、不看评分细则</td><td data-page-node-id="BV7PwQhoaUeBRVzAmTnl63">题干 + 参考答案 + 评分细则三者同时编码</td></tr>
+    <tr data-page-node-id="14go5GYzV7T8OQ7QYoHKKx"><td class="v" data-page-node-id="Dz4MPu6tIY0ov0J21VfNFB">4</td><td data-page-node-id="xW80BwsK2dN2ecXD0Bedrt">把"考点"当"能力"（"考查比喻"≠"考查鉴赏能力"）</td><td data-page-node-id="TrWJ7ISFyArG1QJMXf1UpW">知识点与能力点<b data-page-node-id="KFBE8xXwQWK8lDPHR1THwn">双编码</b>，分列两栏</td></tr>
+    <tr data-page-node-id="8cNdXVJA5eCaVjmUcuKEfw"><td class="v" data-page-node-id="OWkn1YkKWfbJpPbaopyvOe">5</td><td data-page-node-id="vjZ5a6WQ7iiMRgU0gC4dWq">用 2—3 年样本就下"趋势"结论</td><td data-page-node-id="I2TJUyTcRBbizhEwZALx4b">≥5 年才称趋势；小样本只做描述性观察</td></tr>
+    <tr data-page-node-id="fypeGEHnbMWYkjG4pRrqEM"><td class="v" data-page-node-id="hBhMWRwtRMe5CArWRIW811">6</td><td data-page-node-id="FWouE3z8nx3SnlrtrmZxQk">结论是口号（"更加重视核心素养"）却无数据支撑</td><td data-page-node-id="kOaFfbQAS9jGo5fUxMVEOd">每个结论后必须挂具体频次/分值数据</td></tr>
+    <tr data-page-node-id="lOSblHsarvPn4JC15jZJyd"><td class="v" data-page-node-id="uPz3sTRVQlXl3mTIAHLzDm">7</td><td data-page-node-id="UezUPJs2fRiarC7TYSISrg">只分析"考了什么"，不分析"怎么给分"</td><td data-page-node-id="73bGzHHye4TEVeCVCSfTWf">补评分方式编码——这才是对教学最有用的部分</td></tr>
+    <tr data-page-node-id="EWQbemHJ8zSmWLVY1qLjeJ"><td class="v" data-page-node-id="uwBP1OuRrlS50LDIGgSMwR">8</td><td data-page-node-id="OCXyYEAylSG7MWTJ8aDnbT">数据来源、试卷版权、统计口径不作说明</td><td data-page-node-id="4Cv2qfeo9kDQJmVrM9r28I">研究报告附"数据来源与口径说明"一节</td></tr>
+  </tbody>
+</table>
+
+<h2 data-page-node-id="bagt6Hj2Y7Gv47ay4l7BLH">八、如果要做成课题 <span class="en" data-page-node-id="BfMf3zi2zYWp34WN61nAm9">方法匹配与成果形态</span></h2>
+<table data-page-node-id="EnWH45GlFGkHL6z3QMW2L7">
+  <thead data-page-node-id="1TjEgOaAAJYsoDGWN6GBtB"><tr data-page-node-id="S7tMZjE1A6v4qElfFSolTB"><th data-page-node-id="YG4mMynrBmLnMkcgzFYzI6">你的研究问题长什么样</th><th data-page-node-id="TRC2Eoh9fz75HyDrSWrKZE">匹配方法</th><th data-page-node-id="wNbQsaGEiCvuYEhkg6yTmV">说明</th></tr></thead>
+  <tbody data-page-node-id="zpkChsQvfgHbm13JJTrdxe">
+    <tr data-page-node-id="KiYduFpISsIGa4VIwE3doZ"><td data-page-node-id="tBhMLo8bhd73MMdGQwBJxe">历年真题的命题规律 / 考点演变是什么</td><td data-page-node-id="BVKuBtFx0UB26nTrDMGNbD"><b data-page-node-id="8W4Z3gwk0HQK95IiuuIxZQ">内容分析法 + 文献研究法</b></td><td data-page-node-id="fV3dyw2NHC7Nuci4ClvHHR">以本框架的编码表为研究工具，信度靠双人编码一致性（Kappa 系数）保障</td></tr>
+    <tr data-page-node-id="7a92fJ8jsRmH9v436vnyQ7"><td data-page-node-id="GOvLkRMatwCqzzpGpj5zpy">某类题型的命题特点与教学启示</td><td data-page-node-id="JuxEHTG1Mcu4StmzimrRqw">内容分析法 + 个案研究法</td><td data-page-node-id="JtOCENKao9JjKN2bLFTMtM">切口小、易落地，适合校级/区级课题</td></tr>
+    <tr data-page-node-id="bXIGfGoj7oa9c9NAcWTmZ0"><td data-page-node-id="p5sLExpbfX8kytcqKiyGOx">某教学策略能否改善学生该类题作答</td><td data-page-node-id="Sn8MVFHaLrA0qmH02AFyYL"><b data-page-node-id="LGeQXzZmuwCAOsRvVcIzBT">行动研究法</b>（有对照条件可用准实验法）</td><td data-page-node-id="BhOs9Vyj2Hzynp7Qqn0Gav">把"真题分析结论"作为干预方案来源，前测—干预—后测形成闭环</td></tr>
+    <tr data-page-node-id="0KXx6pXn0ilsc2K6HlmsR1"><td data-page-node-id="ffOW3QRBXKgeV8UCeUkpGi">教师对真题的解读与使用现状</td><td data-page-node-id="ihcqIcKhIqVD0qlfs84Z0o">调查研究法（问卷 + 访谈）</td><td data-page-node-id="VHQX0VPcdh6bKXS4DCnUs0">适合作为课题前期的现状摸底</td></tr>
+  </tbody>
+</table>
+<p data-page-node-id="MP7Tfbubf7eUo9MBcoHjWx">可产出的成果形态：编码表与全套统计数据 / 考点频次手册 / 真题命题规律分析报告 / 配套校本复习专题 / 相关课例若干。注意：结题报告要与开题报告的"研究内容"逐条对应，成果也要逐条挂靠研究内容，不做互不呼应的流水账。</p>
+
+<footer data-page-node-id="HAAcKxs42gZyyAbFfcTqzG">
+  本框架为教研/研究工具模板，供按本校学情与研究目的裁剪使用。涉及课标与高考评价体系的引用已按官方表述核对；如需写入正式研究报告，建议再行核对最新版原文条目。<br data-page-node-id="pbL0gwzrBdS1fxRQZMEsuw">
+  配套文件：<code data-page-node-id="ncIfSfZI1uPV7CYGnFT6lO">高考语文试卷编码表模板.csv</code>（可直接用 Excel 打开填写）
+</footer>
+
+</div>
+</body>
+</html>

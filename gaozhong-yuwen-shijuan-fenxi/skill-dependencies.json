@@ -1,0 +1,197 @@
+{
+  "schema_version": "1",
+  "capabilities": [
+    "试卷编码",
+    "答卷比对",
+    "优劣势判定",
+    "报告生成",
+    "数据表生成"
+  ],
+  "dependencies": [
+    {
+      "id": "python-runtime",
+      "type": "runtime",
+      "required": true,
+      "auth_type": "none",
+      "capabilities": [
+        "试卷编码",
+        "答卷比对",
+        "数据表生成"
+      ],
+      "checks": [
+        {
+          "id": "python-version",
+          "type": "python",
+          "required": true,
+          "min_version": "3.10"
+        }
+      ],
+      "setup": {
+        "official_home_url": "https://www.python.org/",
+        "official_docs_url": "https://docs.python.org/3/",
+        "download_url": "https://www.python.org/downloads/",
+        "console_path": [
+          "python.org",
+          "Downloads",
+          "选择对应系统版本"
+        ],
+        "steps": [
+          "从 python.org/downloads 下载 3.10 及以上版本",
+          "安装时勾选 Add Python to PATH",
+          "重开终端后运行 python --version 确认版本"
+        ],
+        "verify": "python --version 输出 3.10 及以上版本号",
+        "security": "本 Skill 仅使用 Python 标准库，不安装第三方包，不读取环境变量与凭据",
+        "verified_at": "2026-09-12",
+        "applies_to_version": "3.10 及以上"
+      },
+      "degradation": [
+        {
+          "capability": "试卷编码",
+          "trigger": "Python 不可用或版本低于 3.10",
+          "fallback": "跳过脚本检查，直接读取用户上传材料并人工编码",
+          "user_input": "用户直接提供试卷文本内容",
+          "limitations": "无法运行输入检查脚本，文件可用性需人工确认",
+          "evidence_label": "部分验证",
+          "recovery": "安装符合版本的 Python 后重跑 check_inputs.py",
+          "stop_condition": "试卷文件无法读取且用户无法提供文本内容"
+        },
+        {
+          "capability": "答卷比对",
+          "trigger": "Python 不可用或版本低于 3.10",
+          "fallback": "跳过输入检查，由模型直接读取答卷内容并标注字迹不清处",
+          "user_input": "用户提供可读格式的答卷",
+          "limitations": "无法程序化确认文件完整性，需人工核对",
+          "evidence_label": "部分验证",
+          "recovery": "安装符合版本的 Python 后重跑 check_inputs.py",
+          "stop_condition": "答卷关键内容无法辨认且用户无法确认"
+        },
+        {
+          "capability": "数据表生成",
+          "trigger": "Python 不可用或 xlsx 写入失败",
+          "fallback": "以 Markdown 表格输出结构化内容",
+          "user_input": "无",
+          "limitations": "未生成 xlsx 文件，需用户自行另存",
+          "evidence_label": "部分验证",
+          "recovery": "确认 Python 与磁盘权限后重跑 make_workbook.py",
+          "stop_condition": "用户要求必须交付 xlsx 且无法生成"
+        }
+      ]
+    },
+    {
+      "id": "material-files",
+      "type": "permission",
+      "required": true,
+      "auth_type": "none",
+      "capabilities": [
+        "试卷编码",
+        "答卷比对"
+      ],
+      "checks": [
+        {
+          "id": "paper-read",
+          "type": "file",
+          "required": true,
+          "path": "$WORKBUDDY_SKILL_INPUT/试卷文件"
+        },
+        {
+          "id": "answer-read",
+          "type": "file",
+          "required": false,
+          "path": "$WORKBUDDY_SKILL_INPUT/答卷文件"
+        }
+      ],
+      "setup": {
+        "official_home_url": "https://www.python.org/",
+        "official_docs_url": "https://docs.python.org/3/library/pathlib.html",
+        "console_path": [
+          "本地文件系统",
+          "用户指定路径"
+        ],
+        "steps": [
+          "把试卷与答卷文件放到可读目录",
+          "在对话中提供文件路径或直接上传",
+          "确认文件格式属于支持列表"
+        ],
+        "verify": "python scripts/check_inputs.py <试卷路径> 返回 ready 或 partial",
+        "security": "只读访问用户明确提供的文件，不遍历其他目录，不修改或删除任何文件",
+        "verified_at": "2026-09-12",
+        "applies_to_version": "1.0.0"
+      },
+      "degradation": [
+        {
+          "capability": "试卷编码",
+          "trigger": "试卷文件不存在、不可读或格式不支持",
+          "fallback": "请用户改传支持的格式或直接粘贴文本",
+          "user_input": "可读格式的试卷文件或文本内容",
+          "limitations": "未获取到原始试卷内容，编码仅基于用户提供的文本",
+          "evidence_label": "未验证",
+          "recovery": "提供含文字层的 PDF、docx、图片或纯文本",
+          "stop_condition": "无法获得任何可读的试卷内容"
+        },
+        {
+          "capability": "答卷比对",
+          "trigger": "答卷文件缺失或关键内容无法辨认",
+          "fallback": "只输出试卷考查范围分析，不做学生优劣势判定",
+          "user_input": "清晰的答卷或用户对模糊处的确认",
+          "limitations": "无法判定学生优劣势，相关结论全部不输出",
+          "evidence_label": "未验证",
+          "recovery": "提供更清晰的答卷扫描件或电子文本",
+          "stop_condition": "用户要求判定学生优劣势但答卷不可读"
+        }
+      ]
+    }
+  ],
+  "functional_degradations": [
+    {
+      "capability": "试卷编码",
+      "trigger": "试卷缺少题干，或仅提供题号与分值",
+      "fallback": "只编码 L1 基础属性，其余层标记未提供",
+      "user_input": "完整试卷内容",
+      "limitations": "无法确定考查点、能力层级与命题技术",
+      "evidence_label": "未验证",
+      "recovery": "补充完整题干后重新编码",
+      "stop_condition": "用户要求考查范围结论但无题干内容"
+    },
+    {
+      "capability": "答卷比对",
+      "trigger": "未提供评分细则",
+      "fallback": "只判要点方向是否命中，不给精确分与单点得分率",
+      "user_input": "参考答案与评分细则",
+      "limitations": "结论停留在部分验证等级，不能做单点失分分析",
+      "evidence_label": "部分验证",
+      "recovery": "提供评分细则后重新判读",
+      "stop_condition": "无任何评分依据且用户要求精确判分"
+    },
+    {
+      "capability": "优劣势判定",
+      "trigger": "某考点涉及的设问少于 3 个",
+      "fallback": "只标注为观察，不下强弱结论",
+      "user_input": "更多同类试题的作答数据",
+      "limitations": "样本不足的考点不纳入优劣势结论",
+      "evidence_label": "部分验证",
+      "recovery": "积累更多作答数据后重新判定",
+      "stop_condition": "全部考点样本均不足，无法形成优劣势结论"
+    },
+    {
+      "capability": "报告生成",
+      "trigger": "输出目录不存在或不可写",
+      "fallback": "直接在对话中输出报告全文",
+      "user_input": "可写的输出目录",
+      "limitations": "报告未落盘为用户可保存的文件",
+      "evidence_label": "部分验证",
+      "recovery": "指定可写目录后重新生成",
+      "stop_condition": "用户要求文件形式交付且无可用目录"
+    },
+    {
+      "capability": "数据表生成",
+      "trigger": "编码结果 JSON 缺失或格式不符",
+      "fallback": "以 Markdown 表格输出三张表",
+      "user_input": "按约定结构提供的编码结果",
+      "limitations": "未生成 xlsx 文件",
+      "evidence_label": "部分验证",
+      "recovery": "按约定结构补全 JSON 后重跑 make_workbook.py",
+      "stop_condition": "用户要求必须交付 xlsx 且无有效编码结果"
+    }
+  ]
+}
